@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
+#include<stdio.h>
 /**
  * main - Prints the numbers 0-9.
  *
@@ -16,6 +13,6 @@ int main(void)
 		printf("%d", i);
 		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
