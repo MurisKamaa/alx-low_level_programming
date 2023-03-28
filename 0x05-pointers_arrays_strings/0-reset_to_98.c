@@ -4,7 +4,7 @@
  * the value it points to to 98.
  * Return: No return
  */
-void reset_to_98(int *n);
+void reset_to_98(int *n)
 {
 	*n = 98;
 }
