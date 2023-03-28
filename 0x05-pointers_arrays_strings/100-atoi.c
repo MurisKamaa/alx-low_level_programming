@@ -7,16 +7,17 @@
 int _atoi(char *s)
 {
 	int sign = 1;
-	int i;
+	int i = 0;
+	int j = 0;
 	int nb;
 
-	if (s[i] == '-')
+	if (s[j] == '-')
 	{
 		sign = -1;
-		i++;
+		j++;
 	}
-	else if (s[i] == '+')
-		i++;
+	else if (s[j] == '+')
+		j++;
 
 	while (s[i] != '\0')
 	{
