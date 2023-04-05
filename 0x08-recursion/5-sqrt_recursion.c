@@ -14,8 +14,9 @@ int _sqrt_recursion(int n)
 		return (0);
 	else if (n == 1)
 		return (1);
-	int result = _sqrt_recursion(n / 4) * 2;
+	int result;
 
+	result = _sqrt_recursion(n / 4) * 2;
 	if ((result + 1) * (result + 1) <= n)
 		return (result + 1);
 	return (result);
