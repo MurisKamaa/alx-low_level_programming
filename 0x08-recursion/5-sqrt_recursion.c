@@ -31,5 +31,5 @@ int _sqrt_recursion(int n)
 		}
 		b = c - 1;
 	}
-	return (pow)
+	return (pow);
 }
