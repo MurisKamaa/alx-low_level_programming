@@ -8,28 +8,15 @@
  */
 int _sqrt_recursion(int n)
 {
-	int a = 1;
-	int b = n;
-	int pow;
-
 	if (n < 0)
 		return (-1);
-	if (n == 0)
+	else if (n == 0)
 		return (0);
-	if (n == 1)
+	else if (n == 1)
 		return (1);
-	while (a <= b)
-	{
-		int c = (a + b) / 2;
+	int result = _sqrt_recursion(n / 4) * 2;
 
-		if (c * c == n)
-			return (c);
-		else if (c * c < n)
-		{
-			a = c + 1;
-			pow = c;
-		}
-		b = c - 1;
-	}
-	return (pow);
+	if ((result + 1) * (result + 1) <= n)
+		return (result + 1);
+	return (result);
 }
