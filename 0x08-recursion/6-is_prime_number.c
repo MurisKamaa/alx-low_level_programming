@@ -16,15 +16,15 @@ int is_prime_number(int n)
 	else if (n % 2 == 0 || n % 3 == 0)
 		return (0);
 	return (prime_checker(n, 5));
+}
 
-	int prime_checker(int n, int k)
-	{
-		int sqr = k * k;
+int prime_checker(int n, int k)
+{
+	int sqr = k * k;
 
-		if (sqr > n)
-			return (1);
-		else if (n % k == 0 || n % (k + 2) == 0)
-			return (0);
-		return (prime_checker(n, k + 6));
-	}
+	if (sqr > n)
+		return (1);
+	else if (n % k == 0 || n % (k + 2) == 0)
+		return (0);
+	return (prime_checker(n, k + 6));
 }
