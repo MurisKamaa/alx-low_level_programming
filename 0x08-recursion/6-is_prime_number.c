@@ -18,6 +18,12 @@ int is_prime_number(int n)
 	return (prime_checker(n, 5));
 }
 
+/**
+ *prime_checker - cheks for prime number
+ *@n: input number
+ *@k: input k
+ *Return: returns 1 or 0
+ */
 int prime_checker(int n, int k)
 {
 	int sqr = k * k;
