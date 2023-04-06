@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- *is_prime - Checks if a number is prime
+ *is_prime_number - Checks if a number is prime
  *@n: Number input (integer)
+ *@k: input k
  *Return: 1 if n is prime and 0 otherwise
  */
 int prime_checker(int n, int k);
