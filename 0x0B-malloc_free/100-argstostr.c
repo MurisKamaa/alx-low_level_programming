@@ -28,7 +28,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		len = strlen(av[i]);
-		strcpy(res + postn, av[i]);
+		strcpy(res + pos, av[i]);
 		pos += len;
 		res[pos++] = '\n';
 	}
