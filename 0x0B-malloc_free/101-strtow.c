@@ -33,9 +33,9 @@ char **strtow(char *str)
 	}
 	for (i = 0; i <= len; i++)
 	{
-		if (str[i] == " " || str[i] == '\0')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (i > 0 and str[i - 1] != " ")
+			if (i > 0 && str[i - 1] != ' ')
 			{
 				buffer[numWords] = '\0';
 				wrds[numWords] = strdup(buffer);
