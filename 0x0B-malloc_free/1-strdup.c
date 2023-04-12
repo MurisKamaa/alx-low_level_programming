@@ -19,4 +19,5 @@ char *_strdup(char *str)
 	if (ptr == NULL)
 		return (NULL);
 	strcpy(ptr, str);
+	return (ptr);
 }
