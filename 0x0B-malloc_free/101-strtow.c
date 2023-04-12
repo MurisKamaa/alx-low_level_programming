@@ -17,7 +17,7 @@ char **strtow(char *str)
 	int j;
 	char *buffer;
 
-	if (str == NUll or str == "")
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	len = strlen(str);
 	buffer = (char *)malloc(len + 1);
