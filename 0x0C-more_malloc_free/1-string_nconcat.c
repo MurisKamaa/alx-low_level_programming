@@ -13,8 +13,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *res;
-	unsigned int lens1;
-	unsigned int lens2;
+	unsigned int lens1 = strlen(s1);
+	unsigned int lens2 = strlen(s2);
 
 	if (s1 == NULL)
 		s1 = "";
