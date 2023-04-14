@@ -18,12 +18,17 @@ int main(int argc, char *argv[])
 	int total;
 
 	if (argc != 2)
-		print("Error\n");
+	{
+		printf("Error\n");
 		return (1);
+	}
 	cents = atoi(argv[1]);
 	if (cents < 0)
-		print("0\n");
+	{
+		printf("0\n");
 		return (0);
+	}
+
 	quarters = cents / 25;
 	cents %= 25;
 	dimes = cents / 10;
