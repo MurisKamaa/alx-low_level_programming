@@ -22,11 +22,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	if (n > lens2)
 		n = lens2;
-	res = mallo(sizeof(char) * (len1 + n + 1));
+	res = malloc(sizeof(char) * (lens1 + n + 1));
 	if (res == NULL)
 		return (NULL);
-	memcpy(res, s1, len1);
-	memcpy(res + len1, s2, n);
-	res[len1 + n] = '\0';
+	memcpy(res, s1, lens1);
+	memcpy(res + lens1, s2, n);
+	res[lens1 + n] = '\0';
 	retturn (res);
 }
