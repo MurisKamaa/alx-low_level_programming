@@ -1,16 +1,15 @@
 section .data
-message db "Hello, Holberton", 10, 0   ; define the message to be printed
+hello db 'Hello, Holberton!', 10, 0  ; 10 is the ASCII code for newline
+format db '%s', 0
 
 section .text
-global _start
+global main
+extern printf
 
-_start:
-; call printf with the message string
-push message
+main:
+push hello
+push format
 call printf
-add esp, 4    ; pop the argument off the stack
+add rsp, 16
 
-; exit the program
-mov eax, 1    ; system call for exit
-xor ebx, ebx  ; return 0
-int 0x80      ; invoke the system call
+ret
