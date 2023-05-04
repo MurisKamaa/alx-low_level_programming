@@ -3,16 +3,16 @@
 
 /**
  *get_endianness  checks for endianness
- *Return: no return
+ *Return: 0 if big endian or 1 if little endian
  */
 int get_endianness(void)
 {
 	unsigned int num = 1;
-	char *ptr = (char *)&num;
-
-	// If the first byte contains the least significant bit, the system is little endian
+	char *ptr;
+       
+	ptr = (char *)&num;
 	if (*ptr == 1)
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }
