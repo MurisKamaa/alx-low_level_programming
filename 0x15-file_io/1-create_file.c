@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * create_file - creates a file
@@ -10,30 +9,30 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, flags;
-	ssize_t bytes_written;
+	int fd;
+	int nletters;
+	int rwr;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	mode_t mode = S_IRUSR | S_IWUSR;
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
-	flags = O_WRONLY | O_CREAT | O_TRUNC;
-
-	fd = open(filename, flags, mode);
 	if (fd == -1)
 		return (-1);
 
-	if (text_content != NULL)
-	{
-		bytes_written = write(fd, text_content, strlen(text_content));
-		if (bytes_written == -1 || bytes_written != strlen(text_content))
-		{
-			close(fd);
-			return (-1);
-		}
-	}
+	if (!text_content)
+		text_content = "";
+
+	for (nletters = 0; text_content[nletters]; nletters++)
+		;
+
+	rwr = write(fd, text_content, nletters);
+
+	if (rwr == -1)
+		return (-1);
 
 	close(fd);
+
 	return (1);
 }
